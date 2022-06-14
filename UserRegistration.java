@@ -6,8 +6,10 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	public static void main(String[] args) {
-		String name = "[A-Z]+[a-z]{3,}";
-		Pattern pattern = Pattern.compile(name); 
+		String first_Name = "[A-Z]+[a-z]{3,}";
+		String last_Name = "[A-Z]+[a-z]{3,}";
+		String combinePattern = first_Name + last_Name;
+		Pattern pattern = Pattern.compile(combinePattern); 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Your First Name : ");
 		String input = sc.nextLine();
